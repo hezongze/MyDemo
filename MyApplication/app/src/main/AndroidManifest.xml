@@ -23,6 +23,9 @@
         <activity android:name=".rxJavaAndRetrofit.RetrofitView">
 
         </activity>
+        <activity android:name=".memory.MemoryActivity">
+
+        </activity>
     </application>
 
 </manifest>

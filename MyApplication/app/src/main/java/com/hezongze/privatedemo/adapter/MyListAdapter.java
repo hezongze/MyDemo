@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.hezongze.privatedemo.R;
 
@@ -44,7 +45,7 @@ public class MyListAdapter extends BaseAdapter {
         if(view == null){
             listItemView = new ListItemView();
             view = View.inflate(context, R.layout.my_list_item,null);
-            listItemView.setMyTitleView((Button) view.findViewById(R.id.myTitleText));
+            listItemView.setMyTitleView((TextView) view.findViewById(R.id.myTitleText));
             view.setTag(listItemView);
         }else{
             listItemView = (ListItemView) view.getTag();
@@ -56,13 +57,13 @@ public class MyListAdapter extends BaseAdapter {
     }
 
     class ListItemView{
-        private Button myTitleView;
+        private TextView myTitleView;
 
-        public Button getMyTitleView() {
+        public TextView getMyTitleView() {
             return myTitleView;
         }
 
-        public void setMyTitleView(Button myTitleView) {
+        public void setMyTitleView(TextView myTitleView) {
             this.myTitleView = myTitleView;
         }
     }
