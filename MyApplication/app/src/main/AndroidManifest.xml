@@ -26,6 +26,9 @@
         <activity android:name=".memory.MemoryActivity">
 
         </activity>
+        <activity android:name=".uitest.UIActivity">
+
+        </activity>
     </application>
 
 </manifest>

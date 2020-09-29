@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.hezongze.privatedemo.adapter.MyListAdapter;
 import com.hezongze.privatedemo.memory.MemoryActivity;
 import com.hezongze.privatedemo.rxJavaAndRetrofit.RetrofitView;
+import com.hezongze.privatedemo.uitest.UIActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         //https://www.jianshu.com/p/1fb294ec7e3b  参考简书完成编写
         myTitleList.add("RxJava + Retrofit");
         myTitleList.add("Memory(内存相关)");
+        myTitleList.add("自定义Drawable+动画");
 
 
     }
@@ -72,9 +74,18 @@ public class MainActivity extends AppCompatActivity {
                     case 1:
                         intent.setClass(MainActivity.this, MemoryActivity.class);
                         break;
+                    case 2:
+                        intent.setClass(MainActivity.this, UIActivity.class);
+                        break;
                 }
                 startActivity(intent);
             }
         });
+    }
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 }
