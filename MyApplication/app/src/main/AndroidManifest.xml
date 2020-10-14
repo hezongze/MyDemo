@@ -29,6 +29,9 @@
         <activity android:name=".uitest.UIActivity">
 
         </activity>
+        <activity android:name=".supportingScreens.ScreenActivity">
+
+        </activity>
     </application>
 
 </manifest>

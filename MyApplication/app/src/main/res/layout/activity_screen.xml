@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hezongze.privatedemo.supportingScreens.MyRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvText1"
+        android:layout_width="1040px"
+        android:layout_height="80px"
+        android:background="#f00"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="10px"
+        android:text="get测试"
+        />
+
+    <TextView
+        android:id="@+id/tvText2"
+        android:layout_width="680px"
+        android:layout_height="680px"
+        android:layout_marginLeft="200px"
+        android:layout_marginRight="200px"
+        android:layout_marginTop="250px"
+        android:background="#f00"/>
+
+</com.hezongze.privatedemo.supportingScreens.MyRelativeLayout>
