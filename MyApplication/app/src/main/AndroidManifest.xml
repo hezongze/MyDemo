@@ -32,6 +32,9 @@
         <activity android:name=".supportingScreens.ScreenActivity">
 
         </activity>
+        <activity android:name=".jetpack.JetPackActivity">
+
+        </activity>
     </application>
 
 </manifest>

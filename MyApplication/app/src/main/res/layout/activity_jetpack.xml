@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 凡是讓databbinding管理的 都需要加入layout-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 数据关联区域 -->
+    <data>
+        <variable
+            name="data"
+            type="com.hezongze.privatedemo.jetpack.JetpackViewModel" /><!-- 指定哪个viewModel -->
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="1040px"
+            android:layout_height="80px"
+            android:background="#f00"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="10px"
+            android:text="@{data.phoneInfo}" />
+
+        <TextView
+            android:layout_width="680px"
+            android:layout_height="680px"
+            android:layout_marginLeft="200px"
+            android:layout_marginRight="200px"
+            android:layout_marginTop="250px"
+            android:background="#f00" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="加数字"
+            android:onClick="@{()->data.appendNumber(String.valueOf(1))}"
+            />
+
+        <!-- * 这种可以@string/phonexin  资源文件-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="减数字"
+            android:onClick="@{()->data.backspaceNumber()}"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="打电话"
+            android:onClick="@{()->data.call()}"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="清除"
+            android:onClick="@{()->data.clearNumber()}"/>
+
+    </LinearLayout>
+</layout>

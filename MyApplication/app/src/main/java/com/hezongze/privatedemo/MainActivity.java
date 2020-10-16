@@ -11,6 +11,7 @@ import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.hezongze.privatedemo.adapter.MyListAdapter;
+import com.hezongze.privatedemo.jetpack.JetPackActivity;
 import com.hezongze.privatedemo.memory.MemoryActivity;
 import com.hezongze.privatedemo.rxJavaAndRetrofit.RetrofitView;
 import com.hezongze.privatedemo.supportingScreens.ScreenActivity;
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         myTitleList.add("Memory(内存相关)");
         myTitleList.add("自定义Drawable+动画");
         myTitleList.add("屏幕适配");
+        myTitleList.add("jetpack");
 
 
     }
@@ -81,6 +83,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 3:
                         intent.setClass(MainActivity.this, ScreenActivity.class);
+                        break;
+                    case 4:
+                        intent.setClass(MainActivity.this, JetPackActivity.class);
                         break;
                 }
                 startActivity(intent);
